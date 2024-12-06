@@ -149,6 +149,96 @@ Rabin-Karp algorithm for pattern searching.,Strings,Hard,False
 Longest Palindromic Subsequence.,Strings,Hard,False
 Longest Common Substring problem (DP approach).,Strings,Hard,False
 Word Break problem (segment a string into dictionary words).,Strings,Hard,False
+"Explain the concept of a stack and its basic operations (push, pop, peek).","Stack",Basic,False
+"Implement a stack using an array.","Stack",Basic,False
+"Implement a stack using a linked list.","Stack",Basic,False
+"Check if a stack is empty.","Stack",Basic,False
+"Get the size of a stack.","Stack",Basic,False
+"Peek the top element of a stack without popping.","Stack",Basic,False
+"Reverse a string using a stack.","Stack",Very Simple,False
+"Check for balanced parentheses using a stack.","Stack",Very Simple,False
+"Convert infix expression to postfix using a stack.","Stack",Very Simple,False
+"Evaluate a postfix expression using a stack.","Stack",Very Simple,False
+"Find the minimum element in a stack in O(1) time using an auxiliary stack.","Stack",Very Simple,False
+"Sort a stack using recursion.","Stack",Very Simple,False
+"Implement two stacks in one array.","Stack",Simple,False
+"Implement a stack that supports getMin() in O(1) without using extra space.","Stack",Simple,False
+"Reverse a stack using recursion (no extra stack).","Stack",Simple,False
+"Check if two stacks can produce the same pop sequence.","Stack",Simple,False
+"Delete the middle element of a stack.","Stack",Simple,False
+"Find the next greater element using a stack.","Stack",Simple,False
+"Largest rectangle in a histogram using a stack.","Stack",Medium,False
+"Find maximum area rectangle in a binary matrix using a stack.","Stack",Medium,False
+"Check if a given sequence can be formed by a stack permutation.","Stack",Medium,False
+"Implement an LRU cache using stack and doubly linked list.","Stack",Medium,False
+"Solve the Tower of Hanoi using stacks.","Stack",Medium,False
+"Implement a special stack that supports O(1) push, pop, and getMin with no extra stack.","Stack",Medium,False
+"Implement a stack using a queue.","Stack",Hard,False
+"Reverse a stack using only stack operations (no recursion).","Stack",Hard,False
+"Sort a stack using a single additional stack.","Stack",Hard,False
+"Design a max-stack data structure with push, pop, top, peekMax, and popMax operations.","Stack",Hard,False
+"Implement a stack-based calculator for arithmetic expressions.","Stack",Hard,False
+"Use a monotonic stack to find the maximum sum subarray efficiently.","Stack",Hard,False
+"Explain the concept of a queue and basic operations (enqueue, dequeue, peek).","Queue",Basic,False
+"Implement a queue using an array.","Queue",Basic,False
+"Implement a queue using a linked list.","Queue",Basic,False
+"Check if a queue is empty.","Queue",Basic,False
+"Get the size of a queue.","Queue",Basic,False
+"Peek the front element of a queue without dequeuing.","Queue",Basic,False
+"Implement a circular queue using an array.","Queue",Very Simple,False
+"Reverse the first k elements of a queue.","Queue",Very Simple,False
+"Generate binary numbers from 1 to n using a queue.","Queue",Very Simple,False
+"Interleave the first half and the second half of a queue.","Queue",Very Simple,False
+"Move all negative numbers to the front of a queue.","Queue",Very Simple,False
+"Check if two queues store the same elements in the same order.","Queue",Very Simple,False
+"Implement a deque (double-ended queue).","Queue",Simple,False
+"Implement a priority queue using a library function.","Queue",Simple,False
+"Use a queue to implement a stack.","Queue",Simple,False
+"Implement a queue using two stacks.","Queue",Simple,False
+"Check if a queue can be sorted using a stack.","Queue",Simple,False
+"Reverse a queue using recursion.","Queue",Simple,False
+"Given a queue of characters, remove all non-alphabets.","Queue",Medium,False
+"Use a queue for BFS in a Snake and Ladder game.","Queue",Medium,False
+"Find the maximum of each subarray of size k using a deque.","Queue",Medium,False
+"Implement a sliding window maximum using a deque.","Queue",Medium,False
+"Generate n-bit Gray codes using a queue.","Queue",Medium,False
+"Implement a fixed-length queue that blocks when full (producer-consumer).","Queue",Medium,False
+"Implement a priority queue from scratch using a binary heap.","Queue",Hard,False
+"Merge multiple queues of tasks into one while maintaining order.","Queue",Hard,False
+"Simulate a call center with multiple agents using queues.","Queue",Hard,False
+"Find the minimum time for all processes to complete using round-robin scheduling.","Queue",Hard,False
+"Use queue-based BFS to find the shortest path in a maze.","Queue",Hard,False
+"Implement a multi-level feedback queue scheduler.","Queue",Hard,False
+"Explain min-heap and max-heap and their properties.","Heap",Basic,False
+"Build a min-heap from an array.","Heap",Basic,False
+"Insert an element into a min-heap.","Heap",Basic,False
+"Extract the minimum element from a min-heap.","Heap",Basic,False
+"Implement a max-heap using an array.","Heap",Basic,False
+"Get the min or max element of a heap without removing it.","Heap",Basic,False
+"Convert a min-heap to a max-heap.","Heap",Very Simple,False
+"Find the kth smallest element in an array using a min-heap.","Heap",Very Simple,False
+"Find the kth largest element in an array using a max-heap.","Heap",Very Simple,False
+"Merge k sorted lists using a min-heap.","Heap",Very Simple,False
+"Sort an array using heap sort.","Heap",Very Simple,False
+"Check if a binary tree is a valid heap.","Heap",Very Simple,False
+"Implement a priority queue using a heap.","Heap",Simple,False
+"Reorganize a string so no two adjacent characters are the same using a max-heap.","Heap",Simple,False
+"Find the median of a running stream of numbers using two heaps.","Heap",Simple,False
+"Find the smallest range containing elements from k lists using a min-heap.","Heap",Simple,False
+"Connect ropes with minimum cost using a min-heap.","Heap",Simple,False
+"Find the k closest points to the origin using a max-heap.","Heap",Simple,False
+"Merge k sorted arrays using a min-heap.","Heap",Medium,False
+"Find top k frequent elements in an array using a max-heap.","Heap",Medium,False
+"Convert a BST to a min-heap.","Heap",Medium,False
+"Implement increase-key and decrease-key operations in a heap.","Heap",Medium,False
+"Implement a double-ended priority queue.","Heap",Medium,False
+"Check if a given array represents a valid heap.","Heap",Medium,False
+"Design a data structure that supports insert, delete, and getMedian in O(log n) using heaps.","Heap",Hard,False
+"Implement Dijkstra’s Algorithm using a min-heap.","Heap",Hard,False
+"Find the maximum sum combination from two arrays using a max-heap.","Heap",Hard,False
+"Find the kth smallest element in a row-wise and column-wise sorted matrix using a min-heap.","Heap",Hard,False
+"Implement a lazy propagation min-heap for segment-like queries.","Heap",Hard,False
+"Implement a schedule manager that picks the shortest processing job next using a min-heap.","Heap",Hard,False
 Create a binary tree and perform Preorder traversal.,Binary Trees,Basic,False
 Inorder traversal of a binary tree.,Binary Trees,Basic,False
 Postorder traversal of a binary tree.,Binary Trees,Basic,False
@@ -359,3 +449,33 @@ Compute maximum flow using Dinic’s or Push-Relabel algorithm.,Miscellaneous,Ha
 Find Eulerian Path or Eulerian Circuit in a graph.,Miscellaneous,Hard,False
 Meet-in-the-middle approach for subset sum problem.,Miscellaneous,Hard,False
 Heavy-Light Decomposition for advanced tree queries.,Miscellaneous,Hard,False
+"Explain the Trie data structure and its typical use cases.","Trie",Basic,False
+"Implement a Trie with insert and search operations.","Trie",Very Simple,False
+"Implement a function to check if a given word exists in the Trie.","Trie",Very Simple,False
+"Implement a function to check if there is any word in the Trie that starts with a given prefix.","Trie",Very Simple,False
+"Delete a word from a Trie and ensure proper node cleanup.","Trie",Simple,False
+"Count the number of words stored in a Trie.","Trie",Simple,False
+"Find all words in the Trie that have a given prefix.","Trie",Simple,False
+"Implement a Trie to store a dictionary and enable auto-complete suggestions.","Trie",Medium,False
+"Find the longest common prefix among a set of strings using a Trie.","Trie",Medium,False
+"Implement a function to find all unique substrings of a string using a Trie.","Trie",Medium,False
+"Design a Trie that supports wildcard searches with '.' character.","Trie",Hard,False
+"Implement a compressed Trie (Radix Tree) and compare its performance with a standard Trie.","Trie",Hard,False
+"Use a Trie to efficiently solve the Word Break problem.","Trie",Hard,False
+"Implement a function to find the number of distinct substrings in a string using a Trie.","Trie",Hard,False
+"Design a system using Trie to store and retrieve contact names with fast prefix queries.","Trie",Hard,False
+"Explain the Disjoint Set (Union-Find) data structure and its applications.","Disjoint Set",Basic,False
+"Implement a basic Disjoint Set with union and find operations.","Disjoint Set",Very Simple,False
+"Enhance the Disjoint Set with Union by Rank optimization.","Disjoint Set",Very Simple,False
+"Further optimize the Disjoint Set with Path Compression in find operation.","Disjoint Set",Very Simple,False
+"Detect cycles in an undirected graph using Disjoint Set.","Disjoint Set",Simple,False
+"Count the number of connected components in an undirected graph using Disjoint Set.","Disjoint Set",Simple,False
+"Implement a Disjoint Set with both Union by Rank and Path Compression.","Disjoint Set",Simple,False
+"Use Disjoint Set to solve the Kruskal’s Minimum Spanning Tree algorithm.","Disjoint Set",Medium,False
+"Determine if adding an edge between two vertices will form a cycle using Disjoint Set.","Disjoint Set",Medium,False
+"Implement Disjoint Set to efficiently merge groups and find their representatives.","Disjoint Set",Medium,False
+"Use Disjoint Set to solve the Friend Circles problem.","Disjoint Set",Hard,False
+"Design a system to dynamically manage equivalence relations using Disjoint Set.","Disjoint Set",Hard,False
+"Implement a persistent Disjoint Set that can handle historical queries.","Disjoint Set",Hard,False
+"Use Disjoint Set with additional data to track the size of each set.","Disjoint Set",Hard,False
+"Apply Disjoint Set in image processing to find connected regions in a binary image.","Disjoint Set",Hard,False
