@@ -1,0 +1,361 @@
+Question,Topic,Category,Pushed
+"Explain Big-O Notation and give examples of O(n), O(log n), O(n²) time complexities.",Normal (General DSA Concepts),Basic,True
+Differentiate between Time Complexity and Space Complexity with examples.,Normal (General DSA Concepts),Basic,True
+"Describe a Stack data structure and its basic operations (push, pop, peek).",Normal (General DSA Concepts),Basic,True
+"Describe a Queue data structure and its basic operations (enqueue, dequeue).",Normal (General DSA Concepts),Basic,True
+What is a Linked List? Show how to insert an element at the end of a singly linked list.,Normal (General DSA Concepts),Basic,True
+Compare iterative vs. recursive approaches with a simple function example.,Normal (General DSA Concepts),Basic,True
+Implement a Stack using an array.,Normal (General DSA Concepts),Very Simple,False
+Implement a Queue using an array.,Normal (General DSA Concepts),Very Simple,False
+Explain pass-by-value vs pass-by-reference with examples.,Normal (General DSA Concepts),Very Simple,False
+Differentiates linear vs non-linear data structures (array vs tree).,Normal (General DSA Concepts),Very Simple,False
+Convert an array of elements into a singly linked list.,Normal (General DSA Concepts),Very Simple,False
+Compute factorial of a number iteratively and recursively; compare both methods.,Normal (General DSA Concepts),Very Simple,False
+Implement a singly Linked List with insert at head and tail operations.,Normal (General DSA Concepts),Simple,False
+Implement a Stack using a Linked List.,Normal (General DSA Concepts),Simple,False
+Implement a Queue using a Linked List.,Normal (General DSA Concepts),Simple,False
+Explain dynamic arrays (like ArrayList) and show insertion at the end.,Normal (General DSA Concepts),Simple,False
+"Compare arrays and linked lists in detail (insertion, deletion, search complexity).",Normal (General DSA Concepts),Simple,False
+Reverse a singly linked list iteratively and recursively.,Normal (General DSA Concepts),Simple,False
+Implement a Circular Linked List and perform basic operations.,Normal (General DSA Concepts),Medium,False
+Implement a Deque (double-ended queue) and show all operations.,Normal (General DSA Concepts),Medium,False
+Implement a Priority Queue using a binary heap.,Normal (General DSA Concepts),Medium,False
+Explain collision handling in hashing (chaining and open addressing).,Normal (General DSA Concepts),Medium,False
+Implement a hash table using chaining.,Normal (General DSA Concepts),Medium,False
+Detect a cycle in a linked list (Floyd’s Cycle-Finding algorithm).,Normal (General DSA Concepts),Medium,False
+Design a memory-efficient doubly linked list (using XOR linking).,Normal (General DSA Concepts),Hard,False
+"Compare complexity of searching, insertion, and deletion in common data structures.",Normal (General DSA Concepts),Hard,False
+Implement a thread-safe stack (consider synchronization).,Normal (General DSA Concepts),Hard,False
+"Discuss balanced trees (AVL, Red-Black) and their advantages over BSTs.",Normal (General DSA Concepts),Hard,False
+"Design a data structure for high-scalability applications (e.g., large-scale indexing).",Normal (General DSA Concepts),Hard,False
+Choose and justify data structures for a real-world system design scenario (like a social network’s feed).,Normal (General DSA Concepts),Hard,False
+Print all elements of an array.,Arrays,Basic,False
+Find the largest and smallest element in an array.,Arrays,Basic,False
+Compute the sum of elements in an array.,Arrays,Basic,False
+Reverse an array in-place.,Arrays,Basic,False
+Check if an array is sorted.,Arrays,Basic,False
+Insert an element at a given index in an array.,Arrays,Basic,False
+Remove duplicates from a sorted array in-place.,Arrays,Very Simple,False
+Rotate an array by k steps.,Arrays,Very Simple,False
+Move all zeros to the end of the array.,Arrays,Very Simple,False
+Find the second largest element in an array.,Arrays,Very Simple,False
+Merge two sorted arrays into one sorted array.,Arrays,Very Simple,False
+Find the kth smallest element in an unsorted array.,Arrays,Very Simple,False
+Maximum Subarray Sum (Kadane’s Algorithm).,Arrays,Simple,False
+Find the missing number in an array of size n containing elements from 1 to n.,Arrays,Simple,False
+Find an equilibrium index of an array.,Arrays,Simple,False
+"Sort an array of 0s, 1s, and 2s (Dutch National Flag problem).",Arrays,Simple,False
+Find the majority element (more than n/2 occurrences).,Arrays,Simple,False
+Check if a subarray with a given sum exists (subarray sum problem).,Arrays,Simple,False
+Smallest subarray with sum greater than a given value.,Arrays,Medium,False
+Three Sum problem: find triplets that sum to zero.,Arrays,Medium,False
+Container With Most Water problem.,Arrays,Medium,False
+Merge overlapping intervals.,Arrays,Medium,False
+Generate the next permutation of an array.,Arrays,Medium,False
+Minimum number of platforms needed for a railway station problem.,Arrays,Medium,False
+Maximum of all subarrays of size k (Sliding Window Maximum).,Arrays,Hard,False
+Longest Increasing Subsequence.,Arrays,Hard,False
+Median of two sorted arrays.,Arrays,Hard,False
+Trapping Rain Water problem.,Arrays,Hard,False
+Minimum swaps required to sort the array.,Arrays,Hard,False
+Find the longest consecutive sequence in an unsorted array.,Arrays,Hard,False
+Explain stability in sorting and give examples.,Sorting,Basic,False
+Implement Bubble Sort.,Sorting,Basic,False
+Implement Selection Sort.,Sorting,Basic,False
+Implement Insertion Sort.,Sorting,Basic,False
+"Discuss time complexities of Bubble, Selection, Insertion sort.",Sorting,Basic,False
+Sort an array containing only two distinct elements efficiently.,Sorting,Basic,False
+Implement Merge Sort.,Sorting,Very Simple,False
+Implement Quick Sort (Lomuto partition).,Sorting,Very Simple,False
+Implement Counting Sort for integers in a limited range.,Sorting,Very Simple,False
+Implement Radix Sort for non-negative integers.,Sorting,Very Simple,False
+Implement Shell Sort.,Sorting,Very Simple,False
+Sort an array of strings by their length.,Sorting,Very Simple,False
+Sort an array of 0s and 1s using a two-pointer approach.,Sorting,Simple,False
+Sort elements by their frequency.,Sorting,Simple,False
+Use a custom comparator to sort an array of objects.,Sorting,Simple,False
+Sort one array according to the order defined by another array.,Sorting,Simple,False
+Implement Heap Sort.,Sorting,Simple,False
+"Bucket Sort for floating-point numbers in [0,1).",Sorting,Simple,False
+Sort an almost sorted (k-sorted) array.,Sorting,Medium,False
+External sorting concepts for very large files.,Sorting,Medium,False
+Sort a linked list using Merge Sort.,Sorting,Medium,False
+Separate negative and positive numbers in O(n).,Sorting,Medium,False
+Sort and then merge overlapping intervals.,Sorting,Medium,False
+"Sort array by parity (evens first, then odds).",Sorting,Medium,False
+Find the minimum number of swaps to sort the array.,Sorting,Hard,False
+Group and sort words by their anagram classes.,Sorting,Hard,False
+Implement a parallelized version of merge sort.,Sorting,Hard,False
+Efficient external sorting for massive data.,Sorting,Hard,False
+Multi-key sorting (like sorting a database table by multiple columns).,Sorting,Hard,False
+Sort elements by their absolute difference with a given value.,Sorting,Hard,False
+Understand the concept of a hash map and hashing.,HashMaps,Basic,False
+Insert and retrieve elements in a hash map.,HashMaps,Basic,False
+Check existence of a key in a hash map.,HashMaps,Basic,False
+Remove a key-value pair from a hash map.,HashMaps,Basic,False
+Iterate over keys and values of a hash map.,HashMaps,Basic,False
+Count frequency of each character in a string using a hash map.,HashMaps,Basic,False
+Check if two arrays are disjoint using a hash map.,HashMaps,Very Simple,False
+Find intersection of two arrays using a hash map.,HashMaps,Very Simple,False
+First element that appears k times in an array.,HashMaps,Very Simple,False
+Check if a subarray with sum 0 exists (use hashing).,HashMaps,Very Simple,False
+Check if one string is a permutation of another using frequency count.,HashMaps,Very Simple,False
+Two-sum problem using a hash map.,HashMaps,Very Simple,False
+Find the first non-repeating character in a string using a hash map.,HashMaps,Simple,False
+Longest substring without repeating characters using a hash map.,HashMaps,Simple,False
+Group anagrams using hashing.,HashMaps,Simple,False
+Find duplicates within k distance in an array.,HashMaps,Simple,False
+Implement an LRU Cache using a hash map and doubly linked list.,HashMaps,Simple,False
+Create a phone directory using a hash map for lookups.,HashMaps,Simple,False
+"Given (person,boss) pairs, build a hierarchy (org chart) using a hash map.",HashMaps,Medium,False
+Four sum problem using hashing.,HashMaps,Medium,False
+Count subarrays with a given XOR.,HashMaps,Medium,False
+Longest substring with at most K distinct characters.,HashMaps,Medium,False
+Check if two strings are isomorphic using a hash map.,HashMaps,Medium,False
+Smallest window in a string containing all characters of another string.,HashMaps,Medium,False
+Design a hash map from scratch (with collision resolution and resizing).,HashMaps,Hard,False
+Implement a Trie using hash maps for children.,HashMaps,Hard,False
+Word Pattern problem (string follows a given pattern) using a hash map.,HashMaps,Hard,False
+Count distinct substrings using rolling hash (Rabin-Karp concept).,HashMaps,Hard,False
+Find longest substring with distinct characters in O(n).,HashMaps,Hard,False
+"Given a stream of integers, find the first unique number at any time using hashing.",HashMaps,Hard,False
+Print all characters of a string.,Strings,Basic,False
+Convert uppercase to lowercase.,Strings,Basic,False
+Check if a string is a palindrome.,Strings,Basic,False
+Count vowels and consonants in a string.,Strings,Basic,False
+Reverse a string in-place.,Strings,Basic,False
+Remove whitespace from a string.,Strings,Basic,False
+Check if two strings are rotations of each other.,Strings,Very Simple,False
+Find the length of the longest word in a string.,Strings,Very Simple,False
+Count occurrences of a substring in a string.,Strings,Very Simple,False
+Check if two strings are anagrams of each other.,Strings,Very Simple,False
+Convert a string to an integer (atoi).,Strings,Very Simple,False
+Check if a string starts with another string (prefix check).,Strings,Very Simple,False
+Implement strstr() to find a substring in a string.,Strings,Simple,False
+Check if a string is a valid shuffle of two other strings.,Strings,Simple,False
+Reverse the words in a given string.,Strings,Simple,False
+Check if two strings differ by exactly one character.,Strings,Simple,False
+Find the longest common prefix among a set of strings.,Strings,Simple,False
+Basic string compression and decompression.,Strings,Simple,False
+Longest Palindromic Substring.,Strings,Medium,False
+Longest Repeating Substring.,Strings,Medium,False
+Pattern matching with '.' and '*' (regex-like) using recursion or DP.,Strings,Medium,False
+Convert integer to Roman numeral and vice versa.,Strings,Medium,False
+Shortest common superstring or shortest string containing two given strings as subsequences.,Strings,Medium,False
+Edit Distance between two strings.,Strings,Medium,False
+Wildcard pattern matching with '?' and '*'.,Strings,Hard,False
+KMP algorithm for pattern searching (implement and explain).,Strings,Hard,False
+Rabin-Karp algorithm for pattern searching.,Strings,Hard,False
+Longest Palindromic Subsequence.,Strings,Hard,False
+Longest Common Substring problem (DP approach).,Strings,Hard,False
+Word Break problem (segment a string into dictionary words).,Strings,Hard,False
+Create a binary tree and perform Preorder traversal.,Binary Trees,Basic,False
+Inorder traversal of a binary tree.,Binary Trees,Basic,False
+Postorder traversal of a binary tree.,Binary Trees,Basic,False
+Level order traversal (BFS) of a binary tree.,Binary Trees,Basic,False
+Calculate the height of a binary tree.,Binary Trees,Basic,False
+Count the number of nodes in a binary tree.,Binary Trees,Basic,False
+Find the maximum element in a binary tree.,Binary Trees,Very Simple,False
+Search for an element in a binary tree.,Binary Trees,Very Simple,False
+Print all leaf nodes of a binary tree.,Binary Trees,Very Simple,False
+Check if two binary trees are identical.,Binary Trees,Very Simple,False
+Print nodes at a given level in a binary tree.,Binary Trees,Very Simple,False
+Count the number of leaf nodes.,Binary Trees,Very Simple,False
+Find the diameter of a binary tree.,Binary Trees,Simple,False
+Check if a binary tree is balanced (height-balanced).,Binary Trees,Simple,False
+Convert a binary tree into its mirror image.,Binary Trees,Simple,False
+Print the boundary nodes of a binary tree.,Binary Trees,Simple,False
+Check if a binary tree is symmetric.,Binary Trees,Simple,False
+Print the path from root to a given node.,Binary Trees,Simple,False
+Lowest Common Ancestor (LCA) of two nodes in a binary tree.,Binary Trees,Medium,False
+Zigzag (spiral) level order traversal.,Binary Trees,Medium,False
+Serialize and deserialize a binary tree.,Binary Trees,Medium,False
+Print all root-to-leaf paths.,Binary Trees,Medium,False
+Find the sum of nodes at a given level.,Binary Trees,Medium,False
+Print vertical order traversal of a binary tree.,Binary Trees,Medium,False
+Construct a binary tree from inorder and preorder traversals.,Binary Trees,Hard,False
+Construct a binary tree from inorder and postorder traversals.,Binary Trees,Hard,False
+Flatten a binary tree to a linked list.,Binary Trees,Hard,False
+Count the number of subtrees that sum to a given value.,Binary Trees,Hard,False
+Find the maximum path sum in a binary tree.,Binary Trees,Hard,False
+Binary Tree Cameras (covering all nodes with minimum cameras).,Binary Trees,Hard,False
+"What is a tree? Explain nodes, edges, root, leaves.",Trees (General/K-ary Trees),Basic,False
+Implement a generic tree and count its nodes.,Trees (General/K-ary Trees),Basic,False
+"Depth-first traversal (pre, post) of a general tree.",Trees (General/K-ary Trees),Basic,False
+Breadth-first traversal (level order) of a general tree.,Trees (General/K-ary Trees),Basic,False
+Find the height of a general tree.,Trees (General/K-ary Trees),Basic,False
+Identify leaf nodes in a general tree.,Trees (General/K-ary Trees),Basic,False
+Insert a node in a general (k-ary) tree.,Trees (General/K-ary Trees),Very Simple,False
+Delete a node in a general tree.,Trees (General/K-ary Trees),Very Simple,False
+Count the number of children for each node in a k-ary tree.,Trees (General/K-ary Trees),Very Simple,False
+Check if a tree is empty.,Trees (General/K-ary Trees),Very Simple,False
+Find the degree of a node in a tree (number of children).,Trees (General/K-ary Trees),Very Simple,False
+Print all leaf nodes of a k-ary tree.,Trees (General/K-ary Trees),Very Simple,False
+Convert a general tree to a binary tree representation.,Trees (General/K-ary Trees),Simple,False
+Find siblings of a given node in a k-ary tree.,Trees (General/K-ary Trees),Simple,False
+Perform level order traversal line by line in a general tree.,Trees (General/K-ary Trees),Simple,False
+Find the diameter of a general tree.,Trees (General/K-ary Trees),Simple,False
+Find LCA in a general (N-ary) tree.,Trees (General/K-ary Trees),Simple,False
+Compute the sum of all nodes in a general tree.,Trees (General/K-ary Trees),Simple,False
+Perform top-down and bottom-up traversals in a k-ary tree.,Trees (General/K-ary Trees),Medium,False
+Check if two general trees are isomorphic.,Trees (General/K-ary Trees),Medium,False
+Serialize and deserialize a k-ary tree.,Trees (General/K-ary Trees),Medium,False
+Construct a tree from a parent array representation.,Trees (General/K-ary Trees),Medium,False
+Find the centroid of a tree.,Trees (General/K-ary Trees),Medium,False
+Longest path between any two nodes in a general tree.,Trees (General/K-ary Trees),Medium,False
+Convert a multi-way tree into a binary tree and back.,Trees (General/K-ary Trees),Hard,False
+"Given an N-ary tree, find the maximum average subtree.",Trees (General/K-ary Trees),Hard,False
+LCA in an N-ary tree with arbitrary number of children.,Trees (General/K-ary Trees),Hard,False
+Heavy-Light Decomposition for tree queries (advanced).,Trees (General/K-ary Trees),Hard,False
+Euler Tour technique for tree traversal and queries.,Trees (General/K-ary Trees),Hard,False
+Solve a tree DP problem (counting certain types of subtrees).,Trees (General/K-ary Trees),Hard,False
+Represent a graph using an adjacency matrix.,Graphs,Basic,False
+Represent a graph using an adjacency list.,Graphs,Basic,False
+Perform a Depth First Search (DFS) on a graph.,Graphs,Basic,False
+Perform a Breadth First Search (BFS) on a graph.,Graphs,Basic,False
+Detect a cycle in an undirected graph using DFS.,Graphs,Basic,False
+Count the number of connected components in an undirected graph.,Graphs,Basic,False
+Detect a cycle in a directed graph using DFS.,Graphs,Very Simple,False
+Topological Sort of a Directed Acyclic Graph (DAG).,Graphs,Very Simple,False
+Find in-degree and out-degree of each vertex in a directed graph.,Graphs,Very Simple,False
+Check if a graph is bipartite using BFS.,Graphs,Very Simple,False
+Print all edges of a graph.,Graphs,Very Simple,False
+Compute the transpose of a directed graph.,Graphs,Very Simple,False
+Find shortest path in an unweighted graph using BFS.,Graphs,Simple,False
+Count all paths between two vertices in a graph.,Graphs,Simple,False
+Minimum number of edges between two nodes using BFS.,Graphs,Simple,False
+Check if two graphs are isomorphic.,Graphs,Simple,False
+Find a mother vertex in a directed graph.,Graphs,Simple,False
+Convert adjacency list to adjacency matrix and vice versa.,Graphs,Simple,False
+Dijkstra's algorithm for shortest paths in weighted graphs.,Graphs,Medium,False
+Bellman-Ford algorithm for shortest paths with negative edges.,Graphs,Medium,False
+Floyd-Warshall algorithm for all-pairs shortest paths.,Graphs,Medium,False
+Kruskal’s algorithm for Minimum Spanning Tree (MST).,Graphs,Medium,False
+Prim’s algorithm for MST.,Graphs,Medium,False
+Check strong connectivity (Kosaraju/Tarjan’s algorithm).,Graphs,Medium,False
+Johnson’s algorithm for all-pairs shortest paths.,Graphs,Hard,False
+Maximum flow in a graph (Ford-Fulkerson/Edmond-Karp).,Graphs,Hard,False
+Minimum cut in a graph.,Graphs,Hard,False
+Find articulation points and bridges in a graph.,Graphs,Hard,False
+Tarjan’s algorithm for strongly connected components.,Graphs,Hard,False
+Solve the Traveling Salesman Problem (TSP) using backtracking or DP.,Graphs,Hard,False
+Explain memoization vs tabulation in DP.,Dynamic Programming (DP),Basic,False
+Compute Fibonacci numbers using DP.,Dynamic Programming (DP),Basic,False
+Compute factorial using DP.,Dynamic Programming (DP),Basic,False
+Climbing stairs with 1 or 2 steps using DP.,Dynamic Programming (DP),Basic,False
+Minimum cost path in a grid (small size).,Dynamic Programming (DP),Basic,False
+Subset sum problem (check if a subset with given sum exists).,Dynamic Programming (DP),Basic,False
+Coin Change (count ways to make change).,Dynamic Programming (DP),Very Simple,False
+0/1 Knapsack problem.,Dynamic Programming (DP),Very Simple,False
+Longest Common Subsequence (LCS).,Dynamic Programming (DP),Very Simple,False
+Longest Common Substring using DP.,Dynamic Programming (DP),Very Simple,False
+Rod Cutting Problem.,Dynamic Programming (DP),Very Simple,False
+Edit Distance between two strings (basic version).,Dynamic Programming (DP),Very Simple,False
+Longest Increasing Subsequence (LIS) using DP.,Dynamic Programming (DP),Simple,False
+Minimum number of jumps to reach the end of an array.,Dynamic Programming (DP),Simple,False
+Partition problem (split array into two equal sum subsets).,Dynamic Programming (DP),Simple,False
+Count number of ways to partition a set into subsets.,Dynamic Programming (DP),Simple,False
+Count Palindromic Subsequences in a string.,Dynamic Programming (DP),Simple,False
+Maximum Sum Increasing Subsequence.,Dynamic Programming (DP),Simple,False
+Egg Dropping Puzzle.,Dynamic Programming (DP),Medium,False
+Matrix Chain Multiplication.,Dynamic Programming (DP),Medium,False
+Weighted Job Scheduling.,Dynamic Programming (DP),Medium,False
+Word Break Problem using DP.,Dynamic Programming (DP),Medium,False
+Bitmask DP for subsets.,Dynamic Programming (DP),Medium,False
+Minimum Edit Distance with custom operations.,Dynamic Programming (DP),Medium,False
+Job Scheduling to maximize profit (complex variants).,Dynamic Programming (DP),Hard,False
+Traveling Salesman Problem using DP.,Dynamic Programming (DP),Hard,False
+Optimal Binary Search Tree construction.,Dynamic Programming (DP),Hard,False
+Count distinct subsequences of a string using DP.,Dynamic Programming (DP),Hard,False
+Wildcard pattern matching using DP.,Dynamic Programming (DP),Hard,False
+Interleaving String DP problem.,Dynamic Programming (DP),Hard,False
+Introduction to Greedy strategy and examples.,Greedy Approach,Basic,False
+Activity Selection Problem (select max number of non-overlapping intervals).,Greedy Approach,Basic,False
+Fractional Knapsack problem.,Greedy Approach,Basic,False
+Minimum number of coins (for canonical coin systems) using greedy.,Greedy Approach,Basic,False
+Check if greedy is applicable in a given scenario.,Greedy Approach,Basic,False
+Scheduling jobs with deadlines and profits (greedy approach).,Greedy Approach,Basic,False
+Huffman Coding for optimal prefix-free encoding.,Greedy Approach,Very Simple,False
+Gas Station Problem (circular tour).,Greedy Approach,Very Simple,False
+Minimum number of platforms for trains using greedy.,Greedy Approach,Very Simple,False
+Form minimum/largest number from given digits.,Greedy Approach,Very Simple,False
+Minimize sum of products of two arrays by sorting.,Greedy Approach,Very Simple,False
+Reduce a string by repeatedly removing pairs (greedy elimination).,Greedy Approach,Very Simple,False
+Dijkstra’s algorithm as a greedy approach (without advanced data structures).,Greedy Approach,Simple,False
+Prim’s MST algorithm (greedy).,Greedy Approach,Simple,False
+Kruskal’s MST algorithm (greedy).,Greedy Approach,Simple,False
+Partition Labels problem.,Greedy Approach,Simple,False
+Jump Game I (greedy feasibility check).,Greedy Approach,Simple,False
+Assign mice to holes to minimize the maximum time.,Greedy Approach,Simple,False
+Minimum number of arrows to burst all balloons (interval problem).,Greedy Approach,Medium,False
+Candy distribution problem.,Greedy Approach,Medium,False
+Lemonade change problem (greedy verification).,Greedy Approach,Medium,False
+Form max number from digits of two arrays while preserving order.,Greedy Approach,Medium,False
+Reorganize a string to avoid adjacent duplicates (greedy + heap).,Greedy Approach,Medium,False
+Minimize height difference of towers (tower building problem).,Greedy Approach,Medium,False
+Remove k digits to form the smallest number.,Greedy Approach,Hard,False
+Make the highest value palindrome by changing digits greedily.,Greedy Approach,Hard,False
+Complex scheduling problems with multiple constraints using greedy.,Greedy Approach,Hard,False
+Interval partitioning problems with additional constraints.,Greedy Approach,Hard,False
+Lexicographically minimal string rotation using a greedy approach.,Greedy Approach,Hard,False
+Minimize concatenated string length by rearranging strings greedily.,Greedy Approach,Hard,False
+Print numbers from 1 to n using recursion.,Recursion,Basic,False
+Compute factorial recursively.,Recursion,Basic,False
+Compute nth Fibonacci recursively.,Recursion,Basic,False
+Sum of digits of a number recursively.,Recursion,Basic,False
+Reverse a string recursively.,Recursion,Basic,False
+Check if a string is palindrome recursively.,Recursion,Basic,False
+Find GCD of two numbers recursively.,Recursion,Very Simple,False
+Print binary representation of a number recursively.,Recursion,Very Simple,False
+Count ways to climb stairs (1 or 2 steps) recursively.,Recursion,Very Simple,False
+Compute x^n recursively.,Recursion,Very Simple,False
+Find the minimum element in an array recursively.,Recursion,Very Simple,False
+Check if a number is prime recursively.,Recursion,Very Simple,False
+Generate all subsets (power set) of a set recursively.,Recursion,Simple,False
+Generate all permutations of a string recursively.,Recursion,Simple,False
+Tower of Hanoi problem.,Recursion,Simple,False
+Generate all balanced parentheses of length 2*n.,Recursion,Simple,False
+Recursive binary search in a sorted array.,Recursion,Simple,False
+Print all paths in a maze (backtracking).,Recursion,Simple,False
+N-Queens problem (backtracking).,Recursion,Medium,False
+Rat in a Maze with different moves.,Recursion,Medium,False
+Sudoku solver using recursion and backtracking.,Recursion,Medium,False
+Word Search in a 2D grid using DFS backtracking.,Recursion,Medium,False
+Letter combinations of a phone number recursively.,Recursion,Medium,False
+Partition a string into all palindromic substrings (backtracking).,Recursion,Medium,False
+"Cryptarithmetic puzzle solving (e.g., SEND+MORE=MONEY).",Recursion,Hard,False
+Generate all valid IP addresses from a string recursively.,Recursion,Hard,False
+Kth permutation of numbers 1...n using recursion.,Recursion,Hard,False
+Hamiltonian Path problem in a graph (backtracking).,Recursion,Hard,False
+Word Break all possible solutions using recursion.,Recursion,Hard,False
+Backtracking to solve a complex constraint satisfaction problem (like crosswords).,Recursion,Hard,False
+Compute the length of a linked list.,Miscellaneous,Basic,False
+Find the middle element of a linked list.,Miscellaneous,Basic,False
+Reverse a string using a stack.,Miscellaneous,Basic,False
+Implement a queue using two stacks.,Miscellaneous,Basic,False
+Implement a graph using object-oriented principles.,Miscellaneous,Basic,False
+Practically measure time complexity of a function.,Miscellaneous,Basic,False
+Binary search on a rotated sorted array.,Miscellaneous,Very Simple,False
+Validate parentheses using a stack.,Miscellaneous,Very Simple,False
+Find MST in a special pre-structured graph.,Miscellaneous,Very Simple,False
+BFS on a tree (special case of graphs).,Miscellaneous,Very Simple,False
+Implement a simple memory allocation simulation.,Miscellaneous,Very Simple,False
+Generate all binary strings of length n.,Miscellaneous,Very Simple,False
+Maximum rectangular area in a histogram.,Miscellaneous,Simple,False
+Largest rectangle of all 1’s in a binary matrix.,Miscellaneous,Simple,False
+Implement a Trie (prefix tree) and search words.,Miscellaneous,Simple,False
+Check if a linked list is a palindrome.,Miscellaneous,Simple,False
+Quickselect to find the kth smallest element.,Miscellaneous,Simple,False
+Balanced parentheses checker using stack.,Miscellaneous,Simple,False
+Implement Disjoint Set Union (Union-Find) data structure.,Miscellaneous,Medium,False
+Maximum Bipartite Matching in a graph.,Miscellaneous,Medium,False
+Find articulation points and bridges in a graph.,Miscellaneous,Medium,False
+Implement a Segment Tree for range queries.,Miscellaneous,Medium,False
+Implement a Fenwick Tree (Binary Indexed Tree) for prefix sums.,Miscellaneous,Medium,False
+Find the k-th smallest element in a BST.,Miscellaneous,Medium,False
+Solve range minimum query (RMQ) with Sparse Table.,Miscellaneous,Hard,False
+Implement a Suffix Array and/or Suffix Tree for a given string.,Miscellaneous,Hard,False
+Compute maximum flow using Dinic’s or Push-Relabel algorithm.,Miscellaneous,Hard,False
+Find Eulerian Path or Eulerian Circuit in a graph.,Miscellaneous,Hard,False
+Meet-in-the-middle approach for subset sum problem.,Miscellaneous,Hard,False
+Heavy-Light Decomposition for advanced tree queries.,Miscellaneous,Hard,False
