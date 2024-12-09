@@ -7,6 +7,7 @@ from datetime import datetime
 import os
 import logging
 from dotenv import load_dotenv
+import sys
 
 # --------------------------------
 # Load Environment Variables
@@ -196,11 +197,23 @@ schedule.every().day.at(SEND_TIME).do(job)
 
 logger.info("DSA Notifier is running... Press Ctrl+C to stop.")
 
-try:
-    while True:
-        schedule.run_pending()
-        time.sleep(60)
-except KeyboardInterrupt:
-    logger.info("DSA Notifier stopped by user.")
-except Exception as e:
-    logger.error(f"An unexpected error occurred: {e}")
+# -------------------------
+# Check arguments and possibly run now
+# -------------------------
+if __name__ == "__main__":
+    if "--run-now" in sys.argv:
+        job()
+        sys.exit(0)
+
+    logger.info(f"Scheduling the job to run every day at {SEND_TIME}.")
+    schedule.every().day.at(SEND_TIME).do(job)
+    logger.info("DSA Notifier is running... Press Ctrl+C to stop.")
+
+    try:
+        while True:
+            schedule.run_pending()
+            time.sleep(60)
+    except KeyboardInterrupt:
+        logger.info("DSA Notifier stopped by user.")
+    except Exception as e:
+        logger.error(f"An unexpected error occurred: {e}")
