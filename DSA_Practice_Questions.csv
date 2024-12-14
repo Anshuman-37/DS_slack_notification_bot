@@ -23,30 +23,30 @@ Implement a Priority Queue using a binary heap.,Normal (General DSA Concepts),Me
 Explain collision handling in hashing (chaining and open addressing).,Normal (General DSA Concepts),Medium,True
 Implement a hash table using chaining.,Normal (General DSA Concepts),Medium,True
 Detect a cycle in a linked list (Floyd’s Cycle-Finding algorithm).,Normal (General DSA Concepts),Medium,True
-Design a memory-efficient doubly linked list (using XOR linking).,Normal (General DSA Concepts),Hard,False
-"Compare complexity of searching, insertion, and deletion in common data structures.",Normal (General DSA Concepts),Hard,False
-Implement a thread-safe stack (consider synchronization).,Normal (General DSA Concepts),Hard,False
-"Discuss balanced trees (AVL, Red-Black) and their advantages over BSTs.",Normal (General DSA Concepts),Hard,False
-"Design a data structure for high-scalability applications (e.g., large-scale indexing).",Normal (General DSA Concepts),Hard,False
-Choose and justify data structures for a real-world system design scenario (like a social network’s feed).,Normal (General DSA Concepts),Hard,False
-Print all elements of an array.,Arrays,Basic,False
-Find the largest and smallest element in an array.,Arrays,Basic,False
-Compute the sum of elements in an array.,Arrays,Basic,False
-Reverse an array in-place.,Arrays,Basic,False
-Check if an array is sorted.,Arrays,Basic,False
-Insert an element at a given index in an array.,Arrays,Basic,False
-Remove duplicates from a sorted array in-place.,Arrays,Very Simple,False
-Rotate an array by k steps.,Arrays,Very Simple,False
-Move all zeros to the end of the array.,Arrays,Very Simple,False
-Find the second largest element in an array.,Arrays,Very Simple,False
-Merge two sorted arrays into one sorted array.,Arrays,Very Simple,False
-Find the kth smallest element in an unsorted array.,Arrays,Very Simple,False
-Maximum Subarray Sum (Kadane’s Algorithm).,Arrays,Simple,False
-Find the missing number in an array of size n containing elements from 1 to n.,Arrays,Simple,False
-Find an equilibrium index of an array.,Arrays,Simple,False
-"Sort an array of 0s, 1s, and 2s (Dutch National Flag problem).",Arrays,Simple,False
-Find the majority element (more than n/2 occurrences).,Arrays,Simple,False
-Check if a subarray with a given sum exists (subarray sum problem).,Arrays,Simple,False
+Design a memory-efficient doubly linked list (using XOR linking).,Normal (General DSA Concepts),Hard,True
+"Compare complexity of searching, insertion, and deletion in common data structures.",Normal (General DSA Concepts),Hard,True
+Implement a thread-safe stack (consider synchronization).,Normal (General DSA Concepts),Hard,True
+"Discuss balanced trees (AVL, Red-Black) and their advantages over BSTs.",Normal (General DSA Concepts),Hard,True
+"Design a data structure for high-scalability applications (e.g., large-scale indexing).",Normal (General DSA Concepts),Hard,True
+Choose and justify data structures for a real-world system design scenario (like a social network’s feed).,Normal (General DSA Concepts),Hard,True
+Print all elements of an array.,Arrays,Basic,True
+Find the largest and smallest element in an array.,Arrays,Basic,True
+Compute the sum of elements in an array.,Arrays,Basic,True
+Reverse an array in-place.,Arrays,Basic,True
+Check if an array is sorted.,Arrays,Basic,True
+Insert an element at a given index in an array.,Arrays,Basic,True
+Remove duplicates from a sorted array in-place.,Arrays,Very Simple,True
+Rotate an array by k steps.,Arrays,Very Simple,True
+Move all zeros to the end of the array.,Arrays,Very Simple,True
+Find the second largest element in an array.,Arrays,Very Simple,True
+Merge two sorted arrays into one sorted array.,Arrays,Very Simple,True
+Find the kth smallest element in an unsorted array.,Arrays,Very Simple,True
+Maximum Subarray Sum (Kadane’s Algorithm).,Arrays,Simple,True
+Find the missing number in an array of size n containing elements from 1 to n.,Arrays,Simple,True
+Find an equilibrium index of an array.,Arrays,Simple,True
+"Sort an array of 0s, 1s, and 2s (Dutch National Flag problem).",Arrays,Simple,True
+Find the majority element (more than n/2 occurrences).,Arrays,Simple,True
+Check if a subarray with a given sum exists (subarray sum problem).,Arrays,Simple,True
 Smallest subarray with sum greater than a given value.,Arrays,Medium,False
 Three Sum problem: find triplets that sum to zero.,Arrays,Medium,False
 Container With Most Water problem.,Arrays,Medium,False
@@ -479,3 +479,4 @@ Design a system to dynamically manage equivalence relations using Disjoint Set.,
 Implement a persistent Disjoint Set that can handle historical queries.,Disjoint Set,Hard,False
 Use Disjoint Set with additional data to track the size of each set.,Disjoint Set,Hard,False
 Apply Disjoint Set in image processing to find connected regions in a binary image.,Disjoint Set,Hard,False
+Quick Select Algorithm, Things That I found, Very Simple, False

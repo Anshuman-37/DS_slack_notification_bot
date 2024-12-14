@@ -3,7 +3,6 @@ from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 import schedule
 import time
-from datetime import datetime
 import os
 import logging
 from dotenv import load_dotenv
@@ -12,7 +11,7 @@ import sys
 # --------------------------------
 # Load Environment Variables
 # --------------------------------
-load_dotenv()  # Loads variables from .env into environment
+load_dotenv()
 
 # --------------------------------
 # Configuration
@@ -21,190 +20,143 @@ SLACK_TOKEN = os.getenv('SLACK_BOT_TOKEN')
 CHANNEL_ID = os.getenv('SLACK_CHANNEL')
 CSV_FILE = os.getenv('CSV_FILE', 'DSA_Practice_Questions.csv')
 QUESTIONS_PER_DAY = int(os.getenv('QUESTIONS_PER_DAY', 6))
-START_DATE_STR = os.getenv('START_DATE', '2024-12-06')
-SEND_TIME = os.getenv('SEND_TIME', '09:30')
-
-# Convert START_DATE to datetime object
-try:
-    START_DATE = datetime.strptime(START_DATE_STR, '%Y-%m-%d')
-except ValueError:
-    logging.error(f"Invalid START_DATE format: {START_DATE_STR}. Expected YYYY-MM-DD.")
-    START_DATE = datetime.now()
+SEND_TIME = os.getenv('SEND_TIME', '10:00')
 
 # --------------------------------
 # Logging Configuration
 # --------------------------------
 logging.basicConfig(
-    level=logging.DEBUG,
+    level=logging.DEBUG,  # Set to DEBUG for detailed logs
     format='%(asctime)s [%(levelname)s] %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S',
     handlers=[
         logging.FileHandler("dsa_notifier.log"),
-        logging.StreamHandler()
+        logging.StreamHandler(sys.stdout)
     ]
 )
 logger = logging.getLogger(__name__)
 
 logger.info("Starting DSA Notifier script initialization.")
 
-# --------------------------------
-# Initialize Slack client
-# --------------------------------
 if not SLACK_TOKEN:
     logger.error("Slack Bot Token not found. Please set SLACK_BOT_TOKEN in the .env file.")
-    exit(1)
+    sys.exit(1)
 if not CHANNEL_ID:
     logger.error("Slack Channel ID not found. Please set SLACK_CHANNEL in the .env file.")
-    exit(1)
+    sys.exit(1)
 
 client = WebClient(token=SLACK_TOKEN)
 
-def ensure_pushed_column(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Ensure that the 'Pushed' column exists in the DataFrame.
-    If it doesn't, add it and default to False for all rows.
-    """
-    if 'Pushed' not in df.columns:
-        logger.info("'Pushed' column not found. Adding it and defaulting to False.")
-        df['Pushed'] = False
-    else:
-        logger.debug("'Pushed' column already exists.")
-    return df
 
 def load_questions(csv_file: str) -> pd.DataFrame:
-    """
-    Load questions from the CSV file and ensure the Pushed column exists.
-    """
     logger.debug(f"Attempting to load questions from {csv_file}.")
     try:
         df = pd.read_csv(csv_file)
-        df = ensure_pushed_column(df)
-        logger.debug("Questions loaded successfully and 'Pushed' column verified.")
+        logger.debug(f"Questions loaded successfully. Total questions: {len(df)}.")
         return df
     except FileNotFoundError:
-        logger.error(f"CSV file not found at {csv_file}. Ensure the file is in the correct location.")
+        logger.error(f"CSV file not found at {csv_file}. Please ensure the file exists.")
+        return pd.DataFrame()
+    except pd.errors.ParserError as e:
+        logger.error(f"Error parsing CSV file: {e}")
         return pd.DataFrame()
     except Exception as e:
-        logger.error(f"An error occurred while loading the CSV file: {e}")
+        logger.error(f"An unexpected error occurred while loading the CSV: {e}")
         return pd.DataFrame()
+
 
 def save_questions(df: pd.DataFrame, csv_file: str):
-    """
-    Save the updated DataFrame back to the CSV file.
-    """
-    logger.debug(f"Saving updated questions DataFrame to {csv_file}.")
+    logger.debug(f"Saving updated questions to {csv_file}.")
     try:
         df.to_csv(csv_file, index=False)
-        logger.debug("DataFrame saved successfully.")
+        logger.debug("CSV file saved successfully.")
     except Exception as e:
-        logger.error(f"An error occurred while saving the CSV file: {e}")
+        logger.error(f"Failed to save CSV file: {e}")
 
-def get_today_questions(df: pd.DataFrame, start_date: datetime, questions_per_day: int) -> pd.DataFrame:
-    """
-    Determine today's questions based on the start date and number of questions per day.
-    """
-    today = datetime.now().date()
-    delta_days = (today - start_date.date()).days
-    logger.debug(f"Today: {today}, Start Date: {start_date.date()}, Delta Days: {delta_days}")
 
-    if delta_days < 0:
-        logger.info("Current date is before the start date. No questions to send today.")
-        return pd.DataFrame()
+def get_next_questions(df: pd.DataFrame, questions_per_day: int) -> pd.DataFrame:
+    logger.debug("Identifying the last pushed question.")
 
-    start_idx = delta_days * questions_per_day
+    start_idx = (df["Pushed"] != "True").idxmax()
     end_idx = start_idx + questions_per_day
+
     logger.debug(f"Selecting questions from index {start_idx} to {end_idx}.")
 
-    if start_idx >= len(df):
-        # No more questions available
-        logger.info("No more questions available. All questions have been covered.")
-        return pd.DataFrame()
+    next_questions = df.iloc[start_idx:end_idx]
 
-    return df.iloc[start_idx:end_idx]
+    if next_questions.empty:
+        logger.info("No more unpushed questions available.")
+    else:
+        logger.debug(f"Selected {len(next_questions)} questions to push.")
+
+    return next_questions
+
 
 def format_questions(questions_df: pd.DataFrame) -> str:
-    """
-    Format the questions into a Slack message.
-    If questions_df is empty, return a completion message.
-    """
     if questions_df.empty:
-        logger.info("No questions to format. Possibly all questions completed.")
+        logger.info("No questions to format. Preparing completion message.")
         return "🎉 *Congratulations!* You've completed all the practice questions. Keep up the great work! 🎉"
 
     message = "*Today's DSA Practice Questions:* 📚\n"
     for idx, row in questions_df.iterrows():
+        question_number = idx + 1  # Assuming 0-based index
         question = row['Question']
         topic = row['Topic']
         category = row['Category']
-        day_number = (datetime.now().date() - START_DATE.date()).days + 1
-        question_number = (day_number - 1) * QUESTIONS_PER_DAY + (idx % QUESTIONS_PER_DAY) + 1
         message += f"\n• *Question {question_number}:* {question}\n  _Topic:_ {topic} | _Category:_ {category}\n"
+
     return message
 
+
 def send_slack_message(message: str, channel: str = CHANNEL_ID) -> bool:
-    """
-    Send a message to Slack and return True if successful, False otherwise.
-    """
-    logger.debug("Attempting to send Slack message.")
+    logger.debug("Attempting to send message to Slack.")
     try:
         response = client.chat_postMessage(channel=channel, text=message)
-        logger.info("Message sent successfully.")
-        return True
+        if response['ok']:
+            logger.info("Message sent successfully to Slack.")
+            return True
+        else:
+            logger.error(f"Failed to send message to Slack: {response['error']}")
+            return False
     except SlackApiError as e:
-        logger.error(f"Error sending message to Slack: {e.response['error']}")
+        logger.error(f"Slack API Error: {e.response['error']}")
         return False
     except Exception as e:
-        logger.error(f"Unexpected error when sending message to Slack: {e}")
+        logger.error(f"Unexpected error while sending message to Slack: {e}")
         return False
+
 
 def job():
     logger.info("Running scheduled job.")
     df = load_questions(CSV_FILE)
 
     if df.empty:
-        logger.warning("DataFrame is empty. Cannot proceed with question selection.")
-        send_slack_message("❗ *Error:* Questions data not found or failed to load.")
+        logger.warning("No data loaded from CSV. Exiting job.")
+        send_slack_message("❗ *DSA Notifier Error:* Questions data not found or failed to load.")
         return
 
-    today_questions = get_today_questions(df, START_DATE, QUESTIONS_PER_DAY)
+    next_questions = get_next_questions(df, QUESTIONS_PER_DAY)
 
-    if today_questions.empty:
-        logger.info("No questions to send today.")
-        send_slack_message("🔔 *DSA Notifier:* No questions to send today.")
+    if next_questions.empty:
+        logger.info("No new questions to send.")
+        send_slack_message("🔔 *DSA Notifier:* No new questions to send today.")
         return
 
-    today_indices = today_questions.index
-    pushed_values = df.loc[today_indices, 'Pushed']
+    # Prepare message
+    message = format_questions(next_questions)
 
-    if pushed_values.all():
-        logger.info("Today's questions are already marked as pushed. No action needed.")
-        return
+    if send_slack_message(message):
+        df.loc[next_questions.index, 'Pushed'] = True
+        save_questions(df, CSV_FILE)
+        logger.info(f"Marked questions {next_questions.index.min() + 1} to {next_questions.index.max() + 1} as pushed.")
     else:
-        logger.info("Today's questions have not been pushed yet. Attempting to send...")
-        message = format_questions(today_questions)
-        if send_slack_message(message):
-            df.loc[today_indices, 'Pushed'] = True
-            save_questions(df, CSV_FILE)
-            logger.info("Today's questions have been marked as pushed.")
-        else:
-            logger.warning("Failed to send today's questions. Will retry on next run.")
+        logger.warning("Failed to send messages to Slack. Will retry on next run.")
+
 
 # --------------------------------
 # Scheduling
 # --------------------------------
-logger.info(f"Scheduling the job to run every day at {SEND_TIME}.")
-schedule.every().day.at(SEND_TIME).do(job)
-
-logger.info("DSA Notifier is running... Press Ctrl+C to stop.")
-
-# -------------------------
-# Check arguments and possibly run now
-# -------------------------
-if __name__ == "__main__":
-    if "--run-now" in sys.argv:
-        job()
-        sys.exit(0)
-
+def schedule_job():
     logger.info(f"Scheduling the job to run every day at {SEND_TIME}.")
     schedule.every().day.at(SEND_TIME).do(job)
     logger.info("DSA Notifier is running... Press Ctrl+C to stop.")
@@ -216,4 +168,16 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         logger.info("DSA Notifier stopped by user.")
     except Exception as e:
-        logger.error(f"An unexpected error occurred: {e}")
+        logger.error(f"An unexpected error occurred in the scheduler: {e}")
+
+
+# -------------------------
+# Command-Line Argument Handling
+# -------------------------
+if __name__ == "__main__":
+    if "--run-now" in sys.argv:
+        logger.info("Running job immediately as per '--run-now' argument.")
+        job()
+        sys.exit(0)
+
+    schedule_job()
